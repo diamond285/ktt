@@ -1,7 +1,7 @@
 import configparser
 
 from telethon.sync import TelegramClient
-import pandas as pd
+# import pandas as pd
 
 from datetime import datetime, timezone, timedelta
 
@@ -72,6 +72,6 @@ while True:
                     bot.send_message('795918429', f'{channel_link}\n{message.date}\n\n{message.text}')
     
     
-    df = pd.DataFrame(data, columns=["channel_link", "message.sender_id", "message.text"," message.date", "message.id",  "message.post_author", "message.views", "message.peer_id.channel_id" ]) # creates a new dataframe
+    # df = pd.DataFrame(data, columns=["channel_link", "message.sender_id", "message.text"," message.date", "message.id",  "message.post_author", "message.views", "message.peer_id.channel_id" ]) # creates a new dataframe
     # df.to_csv(f'data {datetime.now()}.csv', encoding='utf-8')
     time.sleep(3600)
