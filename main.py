@@ -69,7 +69,7 @@ while True:
             for message in client.iter_messages(channel_link, offset_date=datetime.now(tz=timezone.utc) - timedelta(hours=1), reverse=True):
                 data.append([channel_link, message.sender_id, message.text, message.date, message.id, message.post_author, message.views, message.peer_id.channel_id])
                 if hasTag(tags, message.text):
-                    bot.send_message('8534675651', f'{channel_link}\n{message.date}\n\n{message.text}')
+                    bot.send_message('795918429', f'{channel_link}\n{message.date}\n\n{message.text}')
     
     
     df = pd.DataFrame(data, columns=["channel_link", "message.sender_id", "message.text"," message.date", "message.id",  "message.post_author", "message.views", "message.peer_id.channel_id" ]) # creates a new dataframe
